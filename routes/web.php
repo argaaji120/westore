@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/debug-sentry', function () {
-    throw new Exception('My first Sentry error!');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/categories', 'CategoryController@index')->name('categories');
+Route::get('/details', 'DetailController@index')->name('details');
+Route::get('/cart', 'CartController@index')->name('cart');
+Route::get('/success', 'CartController@success')->name('succcess');
+Route::get('/register/success', 'Auth\RegisterController@success')->name('register.success');
+
+Route::get('/dashboard', 'Dashboard\DashboardController@index')->name('dashboard');
+Route::get('/transactions', 'Dashboard\TransactionController@index')->name('transactions.index');
+Route::get('/transactions/{id}/details', 'Dashboard\TransactionController@show')->name('transactions.show');
+Route::get('/settings', 'Dashboard\SettingController@store')->name('settings');
+Route::get('/account', 'Dashboard\SettingController@account')->name('account');
+Route::resource('/products', 'Dashboard\ProductController');

@@ -1,0 +1,52 @@
+.navbar-store {
+  padding-top: 15px;
+
+  @include media-breakpoint-down(md) {
+    background-color: #ffffff;
+  }
+
+  .nav-item {
+    .nav-link {
+      color: #979797;
+      @include media-breakpoint-up(lg) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    &.active {
+      a.nav-link {
+        color: #ff7158;
+        // color: #29a867;
+      }
+    }
+  }
+
+  .profile-picture {
+    max-height: 45px;
+  }
+
+  .card-badge {
+    display: inline-block;
+    min-width: 2em;
+    padding: 0.3em;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+    background: #29a867;
+    color: #fefefe;
+    margin-left: -10px;
+  }
+
+  .navbar-devider {
+    width: 0px;
+    height: 33.5px;
+    border: 1px solid #e4e4e4;
+    background-color: #e4e4e4;
+  }
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
