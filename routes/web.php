@@ -28,3 +28,7 @@ Route::get('/transactions/{id}/details', 'Dashboard\TransactionController@show')
 Route::get('/settings', 'Dashboard\SettingController@store')->name('settings');
 Route::get('/account', 'Dashboard\SettingController@account')->name('account');
 Route::resource('/products', 'Dashboard\ProductController');
+
+Route::namespace('Admin')->prefix('admin')->group(function () {
+  Route::get('/dashboard', 'DashboardController@index')->name('admin.dashboard');
+});

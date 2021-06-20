@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->integer('zip_code');
             $table->string('country');
             $table->string('phone_number');
+            $table->enum('roles', ['USER', 'ADMIN'])->default('USER');
             $table->string('store_name');
             $table->integer('store_status');
 
