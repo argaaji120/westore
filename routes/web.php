@@ -31,4 +31,5 @@ Route::resource('/products', 'Dashboard\ProductController');
 
 Route::namespace('Admin')->prefix('admin')->group(function () {
   Route::get('/dashboard', 'DashboardController@index')->name('admin.dashboard');
+  Route::resource('category', 'CategoryController');
 });

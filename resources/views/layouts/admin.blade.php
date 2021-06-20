@@ -24,7 +24,8 @@
           <img src="{{ asset('assets/images/dashboard-store-logo.svg') }}" alt="" class="my-4" />
         </div>
         <div class="list-group list-group-flush">
-          <a href="{{ route('admin.dashboard') }}" class="list-group-item list-group-item-action">
+          <a href="{{ route('admin.dashboard') }}"
+            class="list-group-item list-group-item-action{{ request()->is('admin/dashboard') ? ' active' : '' }}">
             Dashboard
           </a>
           <a href="#" class="list-group-item list-group-item-action">
@@ -33,7 +34,8 @@
           <a href="#" class="list-group-item list-group-item-action">
             Products
           </a>
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="{{ route('category.index') }}"
+            class="list-group-item list-group-item-action{{ request()->is('admin/category*') ? ' active' : '' }}">
             Categories
           </a>
           <a href="#" class="list-group-item list-group-item-action">
