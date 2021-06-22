@@ -34,4 +34,5 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
   Route::resource('category', 'CategoryController');
   Route::resource('user', 'UserController');
   Route::resource('product', 'ProductController');
+  Route::resource('gallery-product', 'ProductGalleryController');
 });

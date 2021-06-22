@@ -24,20 +24,19 @@
           <img src="{{ asset('assets/images/dashboard-store-logo.svg') }}" alt="" class="my-4" />
         </div>
         <div class="list-group list-group-flush">
-          <a href="{{ route('admin.dashboard') }}"
-            class="list-group-item list-group-item-action{{ request()->is('admin/dashboard') ? ' active' : '' }}">
+          <a href="{{ route('admin.dashboard') }}" class="list-group-item list-group-item-action{{ request()->is('admin/dashboard') ? ' active' : '' }}">
             Dashboard
           </a>
-          <a href="{{ route('user.index') }}"
-            class="list-group-item list-group-item-action{{ request()->is('admin/user*') ? ' active' : '' }}">
+          <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action{{ request()->is('admin/user*') ? ' active' : '' }}">
             Users
           </a>
-          <a href="{{ route('product.index') }}"
-            class="list-group-item list-group-item-action{{ request()->is('admin/product*') ? ' active' : '' }}">
+          <a href="{{ route('product.index') }}" class="list-group-item list-group-item-action{{ request()->is('admin/product*') ? ' active' : '' }}">
             Products
           </a>
-          <a href="{{ route('category.index') }}"
-            class="list-group-item list-group-item-action{{ request()->is('admin/category*') ? ' active' : '' }}">
+          <a href="{{ route('gallery-product.index') }}" class="list-group-item list-group-item-action{{ request()->is('admin/gallery-product*') ? ' active' : '' }}">
+            Products Gallery
+          </a>
+          <a href="{{ route('category.index') }}" class="list-group-item list-group-item-action{{ request()->is('admin/category*') ? ' active' : '' }}">
             Categories
           </a>
           <a href="#" class="list-group-item list-group-item-action">
