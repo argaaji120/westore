@@ -28,7 +28,8 @@
             class="list-group-item list-group-item-action{{ request()->is('admin/dashboard') ? ' active' : '' }}">
             Dashboard
           </a>
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="{{ route('user.index') }}"
+            class="list-group-item list-group-item-action{{ request()->is('admin/user*') ? ' active' : '' }}">
             Users
           </a>
           <a href="#" class="list-group-item list-group-item-action">
@@ -95,7 +96,6 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
-
   </script>
   <script src="{{ asset('assets/script/navbar-scroll.js') }}"></script>
   @stack('script')

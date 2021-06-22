@@ -20,15 +20,15 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
 
-            $table->longText('address');
-            $table->integer('provinces_id');
-            $table->integer('regencies_id');
-            $table->integer('zip_code');
-            $table->string('country');
-            $table->string('phone_number');
+            $table->longText('address')->nullable();
+            $table->integer('provinces_id')->nullable();
+            $table->integer('regencies_id')->nullable();
+            $table->integer('zip_code')->nullable();
+            $table->string('country')->nullable();
+            $table->string('phone_number')->nullable();
             $table->enum('roles', ['USER', 'ADMIN'])->default('USER');
-            $table->string('store_name');
-            $table->integer('store_status');
+            $table->string('store_name')->nullable();
+            $table->integer('store_status')->nullable();
 
             $table->softDeletes();
             $table->rememberToken();
