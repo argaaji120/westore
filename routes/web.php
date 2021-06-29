@@ -17,7 +17,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/categories', 'CategoryController@index')->name('categories');
-Route::get('/details', 'DetailController@index')->name('details');
+Route::get('/categories/{slug}', 'CategoryController@detail')->name('categories.detail');
+Route::get('/details/{product:slug}', 'DetailController@index')->name('details');
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::get('/success', 'CartController@success')->name('succcess');
 Route::get('/register/success', 'Auth\RegisterController@success')->name('register.success');
