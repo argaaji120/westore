@@ -82,7 +82,7 @@
               </a>
             </div>
           @empty
-            <div class="col-12 text-center py-5" data-aos="fade-up" data-aos-delay="100">No Category Found</div>
+            <div class="col-12 text-center py-5" data-aos="fade-up" data-aos-delay="100">No Product Found</div>
           @endforelse
         </div>
       </div>
